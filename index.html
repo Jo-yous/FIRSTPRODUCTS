@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyeRu Body Butter</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="images2\logo.png" alt="NyeRu Logo" class="logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 hero-content">
+                    <h1 class="hero-title">NYERU<br>BODY BUTTER</h1>
+                    <p class="hero-subtitle">Luxurious natural nourishment for radiant, healthy skin</p>
+                    <div class="cta-buttons">
+                                            
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                            BUY
+                        </button>
+                        
+                    <!-- Updated Bootstrap Modal with Form -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <p>Our body butter is available for $15. Fill in your details and we will contact you immediatly!</p>
+                <form id="purchaseForm">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="number" class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" id="number" placeholder="Phone Number" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="submitPurchase()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+                                        
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactmodal">
+                       contactus
+                    </button>
+                    
+                    <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="contactmodalLabel">GET IN TOUCH</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body2">
+                            Email: nyeruorganics@gmail.com
+                            <br>
+                            Tel No: +256774537274
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="hero-image">
+                        <!-- Slideshow container -->
+                        <div class="slideshow-container">
+                            <div class="mySlides fade">
+                                <img src="images2/image4.jpg" alt="NyeRu Body Butter" class="img-fluid slideshow-image">
+                            </div>
+                
+                            <div class="mySlides fade">
+                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                            </div>
+                            <div class="mySlides fade">
+                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                            </div>
+                
+                            <!-- Next and previous buttons--> 
+                            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                        </div>
+                        
+                        <!-- The dots/circles -->
+                        <div class="dots-container">
+                            <span class="dot" onclick="currentSlide(1)"></span>
+                            <span class="dot" onclick="currentSlide(2)"></span>
+                            <span class="dot" onclick="currentSlide(3)"></span>
+                            <span class="dot" onclick="currentSlide(4)"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="video">
+            <video autoplay muted loop playsinline>
+                <source src="videos/video1.mp4">
+            </video>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Why Choose NyeRu</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <img src="images2/natural.png" alt="100% Natural" class="img-fluid">
+                        <h3>100% Natural</h3>
+                        <p>Made with pure, natural ingredients for your skin's health</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <img src="images2/premium.png" alt="Premium Quality" class="img-fluid">
+                        <h3>Premium Quality</h3>
+                        <p>Carefully crafted to ensure the highest quality standards</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="feature-card">
+                        <img src="images2/normal.png" alt="Visible Results" class="img-fluid">
+                        <h3>Visible Results</h3>
+                        <p>See and feel the difference in your skin's texture</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"I've been using NyeRu Body Butter for a month and my skin has never felt better!"</p>
+                        <p class="testimonial-author">Sarah J.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">"The natural ingredients make such a difference. My skin feels amazing!"</p>
+                        <p class="testimonial-author">Michael R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Modal Form -->
+<div id="popupForm" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Enter Your Details</h2>
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="tel" id="number" placeholder="Phone Number" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <button onclick="submitForm()">Submit</button>
+    </div>
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Initialize tooltips 
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+            var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+                return new bootstrap.Tooltip(tooltipTriggerEl);
+            });
+        });
+    </script>-->
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+    
+       
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+    
+       
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+    
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+        
+        // Auto slideshow
+        setInterval(function() {
+            plusSlides(1);
+        }, 4000); // Change image every 1 seconds
+        
+    </script>
+    <script>
+function submitPurchase() {
+    var name = document.getElementById("name").value;
+    var number = document.getElementById("number").value;
+    var email = document.getElementById("email").value;
+
+    if (name && number && email) {
+        alert("Thank you, " + name + "! We will contact you soon.");
+        var modalElement = document.getElementById("exampleModal");
+        var modalInstance = bootstrap.Modal.getInstance(modalElement);
+        modalInstance.hide(); // Close modal after submission
+    } else {
+        alert("Please fill in all fields.");
+    }
+}
+</script>
+
+</body>
+</html>
