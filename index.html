@@ -115,7 +115,7 @@
                     </div>
                     </div>
                 </div>
-               <!-- <div class="col-lg-6">
+                <div class="col-lg-6">
                     <div class="hero-image">
                         <div class="slideshow-container">
                             <div class="mySlides fade" data-bs-backdrop="false">
@@ -142,7 +142,7 @@
                             <span class="dot" onclick="currentSlide(4)"></span>
                         </div>
                     </div>
-                </div>-->
+                </div>
             </div>
         </div>
         
@@ -227,42 +227,39 @@
             });
         });
     </script>-->
-    <script>
-        let slideIndex = 1;
-        showSlides(slideIndex);
+<script>
+    let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+}
+</script>
     
-       
-        function plusSlides(n1) {
-            showSlides(slideIndex += n1);
-        }
-    
-       
-        function currentSlide(n2) {
-            showSlides(slideIndex = n2);
-        }
-    
-        function showSlides(n3) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n3 > slides.length) {slideIndex = 1}
-            if (n3 < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-                slides[i].style.display = "none";
-            }
-            for (i = 0; i < dots.length; i++) {
-                dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";
-            dots[slideIndex-1].className += " active";
-        }
-        
-        // Auto slideshow
-        setInterval(function() {
-            plusSlides(1);
-        }, 4000); // Change image every 1 seconds
-        
-    </script>
     <script>
 function submitPurchase() {
     var name = document.getElementById("name").value;
@@ -284,7 +281,10 @@ function submitPurchase() {
         modal.show();
     }
 }
-
+setInterval(() => {
+        slideIndex++;
+        showSlides(slideIndex);
+    }, 4000);
 </script>
 
 </body>
