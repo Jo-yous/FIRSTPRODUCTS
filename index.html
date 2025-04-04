@@ -47,50 +47,65 @@
                         </button>
                         
                     <!-- Updated Bootstrap Modal with Form -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-body">
-                <p>Our body butter is available for $15. Fill in your details and we will contact you immediatly!</p>
-                <form id="purchaseForm">
-                    <div class="mb-3">
-                        <label for="name" class="form-label">Name</label>
-                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                    <div class="modal fade" id="exampleModal" data-bs-backdrop="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <p>Our body butter is available for $15. Fill in your details and we will contact you immediatly!</p>
+                                <form id="purchaseForm">
+                                    <div class="mb-3">
+                                        <label for="name" class="form-label">Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="number" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="number" placeholder="Phone Number" required>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label">Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email" required>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary" onclick="submitPurchase()">Submit</button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="number" class="form-label">Phone Number</label>
-                        <input type="tel" class="form-control" id="number" placeholder="Phone Number" required>
+                   </div>
+
+                    <div class="modal fade" id="customAlert" tabindex="-1" data-bs-backdrop="false">
+                        <div class="modal-dialog">
+                            <div class="modal-content" style="background-color: hsl(144, 100%, 50%); color: black;"> 
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Thank You!</h5>                   
+                                </div>
+                                <div class="modal-body">
+                                    <p id="alertMessage"></p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-dark" data-bs-dismiss="modal">OK</button>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mb-3">
-                        <label for="email" class="form-label">Email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Email" required>
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary" onclick="submitPurchase()">Submit</button>
-            </div>
-        </div>
-    </div>
-</div>
 
                                         
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#contactmodal">
                        contactus
                     </button>
                     
-                    <div class="modal fade" id="contactmodal" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
+                    <div class="modal fade" id="contactmodal" data-bs-backdrop="false" tabindex="-1" aria-labelledby="contactmodalLabel" aria-hidden="true">
                         <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header">
-                            <h1 class="modal-title fs-5" id="contactmodalLabel">GET IN TOUCH</h1>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            <h1 class="modal-title fs-5" id="contactmodalLabel" justfiy content="center"> GET IN TOUCH</h1>
                             </div>
                             <div class="modal-body2">
-                            Email: nyeruorganics@gmail.com
-                            <br>
-                            Tel No: +256774537274
+                                 Reach out to us using the following details<br>
+                                Email: nyeruorganics@gmail.com<br>
+                                Tel No: +256774537274
                             </div>
                             <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -100,30 +115,26 @@
                     </div>
                     </div>
                 </div>
-                <div class="col-lg-6">
+               <!-- <div class="col-lg-6">
                     <div class="hero-image">
-                        <!-- Slideshow container -->
                         <div class="slideshow-container">
-                            <div class="mySlides fade">
+                            <div class="mySlides fade" data-bs-backdrop="false">
                                 <img src="images2/image4.jpg" alt="NyeRu Body Butter" class="img-fluid slideshow-image">
                             </div>
                 
                             <div class="mySlides fade">
-                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                                <img src="images2/image6.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
                             </div>
                             <div class="mySlides fade">
-                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                                <img src="images2/image1.png" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
                             </div>
                             <div class="mySlides fade">
-                                <img src="images2/image4.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
+                                <img src="images2/newim.jpg" alt="Brown Tin Body Butter" class="img-fluid slideshow-image">
                             </div>
-                
-                            <!-- Next and previous buttons--> 
                             <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
                             <a class="next" onclick="plusSlides(1)">&#10095;</a>
                         </div>
-                        
-                        <!-- The dots/circles -->
+
                         <div class="dots-container">
                             <span class="dot" onclick="currentSlide(1)"></span>
                             <span class="dot" onclick="currentSlide(2)"></span>
@@ -131,7 +142,7 @@
                             <span class="dot" onclick="currentSlide(4)"></span>
                         </div>
                     </div>
-                </div>
+                </div>-->
             </div>
         </div>
         
@@ -221,21 +232,21 @@
         showSlides(slideIndex);
     
        
-        function plusSlides(n) {
-            showSlides(slideIndex += n);
+        function plusSlides(n1) {
+            showSlides(slideIndex += n1);
         }
     
        
-        function currentSlide(n) {
-            showSlides(slideIndex = n);
+        function currentSlide(n2) {
+            showSlides(slideIndex = n2);
         }
     
-        function showSlides(n) {
+        function showSlides(n3) {
             let i;
             let slides = document.getElementsByClassName("mySlides");
             let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = slides.length}
+            if (n3 > slides.length) {slideIndex = 1}
+            if (n3 < 1) {slideIndex = slides.length}
             for (i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
@@ -259,14 +270,21 @@ function submitPurchase() {
     var email = document.getElementById("email").value;
 
     if (name && number && email) {
-        alert("Thank you, " + name + "! We will contact you soon.");
+        document.getElementById("alertMessage").innerText = "We will contact you soon, " + name + "!";
+        var modal = new bootstrap.Modal(document.getElementById("customAlert"));
+        modal.show();
+
+        // Close the order modal
         var modalElement = document.getElementById("exampleModal");
         var modalInstance = bootstrap.Modal.getInstance(modalElement);
-        modalInstance.hide(); // Close modal after submission
+        modalInstance.hide();
     } else {
-        alert("Please fill in all fields.");
+        document.getElementById("alertMessage").innerText = "Please fill in all fields.";
+        var modal = new bootstrap.Modal(document.getElementById("customAlert"));
+        modal.show();
     }
 }
+
 </script>
 
 </body>
